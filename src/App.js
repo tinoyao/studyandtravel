@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
+import Header from './components/header/Header';
 import './App.css';
+import { StyleProvider } from './contexts/StyleContext';
+import {useLocalStorage} from "./hooks/useLocalStorage";
+import Home from './components/home/Home';
 
 function App() {
+  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
+  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const changeTheme = () => {
+    setIsDark(!isDark);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+        <Header/>
+        <Home/>
+      </StyleProvider>
     </div>
   );
 }

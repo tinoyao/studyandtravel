@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+.container{
+    width: 100%vw;
+    height: 100vh;
+    /* background: url('../../assets/images/australia-home.jpg'); */
+}
+
+
+.text-decoration{
+    display: inline-block;
+    position: relative;
+    margin-top: 150px;
+
+    color: #07206E;
+    font-size: 80px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.text-white{
+    color: #00e5fe;
+}
+
+.text-decoration::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    bottom: -40px;
+    left: 0;
+    background-color: #FF0C30;
+}
+
+
+.text-span{
+    font-family: 'Rubik', sans-serif;
+    font-size: 29px;
+    line-height: 37.7px;
+    color: #07206E;
+}
+.text-white2{
+    color: #00e5fe;
+} 
+
+.grid-home{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-home-1{
+    background-image: url("../../assets/images/australia-2.webp");
+    background-size: cover;
+    height: 671px;
+}
+
+.grid-home-2{
+    img{
+        margin-top: 30px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.container2{
+    width: 100%vw;
+    margin: 50px 0 50px 0;
+    background-color: aliceblue;
+    display: grid;
+    place-items: center;
+
+    .container2-div{
+        width: 750px;
+
+        h2{
+            color: #001b6b;
+            font-size: 37px;
+        }
+
+        span{
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            color: #001b6b;
+        }
+    }
+}
+
+.container3{
+    width: 100%vw;
+    height: 100vh;
+    /* background-image: url("../../assets/images/gold-coast.webp");
+    background-size: contain; */
+   /*  height: 671px; */
+   /* background-color: #001b6b; */
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+
+   img{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 1300px;
+   }
+}
+
+
+@media (max-width: 780px) {
+    .grid-home{
+        grid-template-columns: 1fr;
+    }
+
+    .text-decoration{
+        margin-top: 50px;
+        font-size: 50px;
+
+    }
+
+    .text-span{
+        font-size: 20px;
+
+    }
+
+    .container2{
+        .container2-div{
+            width: 300px;
+
+            h2{
+                font-size: 20px;
+            }
+        }
+    }
+  }
